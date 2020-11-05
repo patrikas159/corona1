@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">CoronaZP20T</string>
     <string name="app_title">infection online status</string>
-
     <string name="login_username">Username</string>
     <string name="login_password">Password</string>
     <string name="login_remember_me">Remember me</string>
     <string name="login_login_btn">Login</string>
     <string name="login_register_btn">Register</string>
     <string name="login_invalid_username">Wrong username or/ and password</string>
+
+
+
+    <string name="register_email">Email</string>
+    <string name="app_register">Registracija</string>
+    <string name="register_username">Username</string>
+    <string name="register_password">Password</string>
+    <string name="register_register_btn">Register</string>
+    <string name="Register_invalid_username">Wrong username or/ email or/ and password </string>
 </resources>
