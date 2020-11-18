@@ -3,11 +3,12 @@ package com.corona.coronazp20t;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     EditText email, pass;
@@ -23,17 +24,23 @@ public class LoginActivity extends AppCompatActivity {
         Button register = findViewById(R.id.register);//susiejamas vaizde esantis elementa su kodu
         final EditText username = findViewById(R.id.username);
         final EditText password = findViewById(R.id.password);
-
+        final CheckBox rememberMe = findViewById(R.id.remember_me);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
 
             public void onClick(View v) {
                 // cia rasomas kodas kuris vykdomas paspaudus mygtuka
-               /* Toast.makeText(LoginActivity.this,"prisijungimo vardas:"+
-                        username.getText().toString() + "\n" + "slaptazodis:" +
-                        password.getText().toString(), Toast.LENGTH_LONG).show();*/
+                //kuriamas user klases objektas
+                // public User(String username, String password)
+                User user=new User(username.getText().toString(), password.getText().toString());
+
+
+               Toast.makeText(LoginActivity.this,"prisijungimo vardas:"+
+                       user.getUsername() + "\n" + "slaptazodis:" +
+                        user.getPassword(),Toast.LENGTH_LONG).show();
                 if (Validation.isValidUsername(username.getText().toString())) {
+
                     //ketinimas pereiti i paieskos langa                is kur            į kur
                     Intent goToSeachActivity = new Intent(LoginActivity.this, SeachActivity.class);
                     startActivity(goToSeachActivity);
