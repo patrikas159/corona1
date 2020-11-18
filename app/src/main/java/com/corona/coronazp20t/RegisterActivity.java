@@ -9,7 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -29,9 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 // cia rasomas kodas kuris vykdomas paspaudus mygtuka
-               /* Toast.makeText(LoginActivity.this,"prisijungimo vardas:"+
-                        username.getText().toString() + "\n" + "slaptazodis:" +
-                        password.getText().toString(), Toast.LENGTH_LONG).show();*/
+
                 if (Validation.isValidUsername(username.getText().toString())) {
                     //ketinimas pereiti i login langa                is kur            į kur
                     Intent goLoginActivity = new Intent(RegisterActivity.this, LoginActivity.class);
